@@ -1,0 +1,52 @@
+.container { 
+  width:80%;
+  margin: auto;
+  text-align: center;
+  display: grid; 
+  grid-template-rows:200px 1fr; 
+  grid-template-columns:10% 90%; 
+  grid-auto-flow: column;
+}
+
+.header {
+	grid-column: 1 / 3;
+	grid-row:1;
+	text-align:left;
+}
+
+.menu {
+	grid-column:1;
+	grid-row:2;
+}
+
+.content {
+  margin: auto;
+  width: 60%;
+  background-color: #ffffff;
+  grid-column:2;
+  grid-row:2;
+}
+
+p {
+	text-align: left;
+}
+
+ul {
+	text-align: left;
+}
+
+body {
+	background-color: #F0F8FF; 
+	font-family: "Arial", Arial, sans-serif;
+}
+h1 {
+	background-color: #6495ed;
+	color: #ffffff;
+}
+h3 {
+	font-size: 35px;
+}
+
+.content > div > img {
+	margin-bottom: 20px;
+}
