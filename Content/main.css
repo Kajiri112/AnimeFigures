@@ -163,16 +163,16 @@ ul#navigation ul li a {
 	grid-column: 2;
 	grid-row: 3;
 	color: #cdd3e9;
+	font-size: 14px;
 }
 
 .post {
 	margin-bottom: 5px;
-	border: 2px solid #cdd3e9;
+	border: 2px solid #555557;
 }
 
 /* Content */
 .content {
-  margin: auto;
   width: 100%;
   background-color: #cdcdcd;
   color: #001033;
@@ -182,25 +182,117 @@ ul#navigation ul li a {
 }
 
 p {
-	text-align: left;
+	text-align: center;
 }
 
 ul {
-	text-align: left;
+	text-align: center;
 }
 
 body {
 	font-family: "Arial", Arial, sans-serif;
 	background-color: #49494c;
+	color: #001033;
+	font-size: 17px;
 }
 
 h3 {
 	font-size: 35px;
 }
 
+h5 {
+	text-align: left;
+}
+
 .content > div > img, .content > div > a > img {
 	margin-bottom: 20px;
 	border: 5px solid #001033;
+}
+
+/* Table */
+table.Figurina {
+  border: 3px solid #001033;
+  background-color: #CDCDCD;
+  width: 80%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+table.Figurina td, table.Figurina th {
+  padding: 5px;
+  width: auto;
+}
+table.Figurina tbody td {
+  font-size: 15px;
+  font-weight: bold;
+  color: #001033;
+}
+table.Figurina tr:nth-child(even) {
+  background: #CDD3E9;
+}
+
+.checked {
+    color: orange;
+} 
+
+/* Content Items */
+
+.item-container {
+	display: grid; 
+  grid-template-rows: 250px; 
+  grid-template-columns: repeat(auto-fill, 250px); 
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.item-container > div > a {
+	height: 100%;
+	width: 100%;
+}
+
+.item-container > div > a > img {
+	height: 100%;
+	width: 100%;
+}
+
+/*
+.ic1 {
+	grid-column: 1;
+}
+
+.ic2 {
+	grid-column: 2;
+}
+
+.ic3 {
+	grid-column: 3;
+}
+
+.ir1 {
+	grid-row: 1;
+}
+
+.ir2 {
+	grid-row: 2;
+}
+
+.ir3 {
+	grid-row: 3;
+}
+*/
+
+.scale {
+	border: 5px solid #272ec8;
+}
+
+.nendoroid {
+	border: 5px solid #0d8620;
+}
+
+.prize {
+	border: 5px solid #e4860d;
 }
 
 /* Footer nicht im Einsatz */
