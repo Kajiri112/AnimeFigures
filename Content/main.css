@@ -41,10 +41,18 @@ html, body, .container {
 
 .navrow {
 	height: 35px;	
+	margin:0;
+    padding:0;
+	display: block;
+	border: 0;
+	grid-column: 1 / 5;
 }
 
 .navtd {	
-	vertical-align: bottom;
+	margin:0;
+    padding:0;
+	display: block;
+	border: 0;
 }
 
 table, tbody, td {
@@ -61,6 +69,7 @@ text-align: left;
 	padding:0;
 	width: 100%;
 	height: 35px;
+	margin: 0;
 }
  
 ul#navigation {
@@ -90,7 +99,7 @@ ul#navigation li a {
 }
  
 ul#navigation li a:hover {
-    background:#f8f8f8;
+    background:#e8ebf5;
     color:#282828;
 }
  
@@ -120,7 +129,7 @@ ul#navigation ul, ul#navigation ul li ul {
     position: absolute;
     z-index: 99999;
     width:180px;
-    background:#f8f8f8;
+    background: rgba(248, 248, 248, 1);
     box-shadow:1px 1px 3px #ccc;
     -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
     -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
@@ -146,16 +155,33 @@ ul#navigation ul li {
 }
  
 ul#navigation ul li a {
-    background:none;
+    background:transparent;
     padding:7px 15px;
     color:#001033;
     text-shadow:1px 1px 0px #e4e7f5;
     text-decoration:none;
     display:inline-block;
-    border:0 none;
     float:left;
     clear:both;
     width:150px;
+}
+
+.instaicon {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin-left: 8px;
+	padding: 5px;
+}
+
+.instaiconkrb {
+	width: 25px;
+	height: 25px;
+}
+
+.instaicon:hover {
+	background:#e8ebf5;
+	
 }
 
 /* Menu */
@@ -169,6 +195,15 @@ ul#navigation ul li a {
 .post {
 	margin-bottom: 5px;
 	border: 2px solid #555557;
+}
+
+.postlink {
+	display: inline-block;
+	background:#e8ebf5;
+}
+
+.postlink:hover {
+	color:#e8ebf5;
 }
 
 /* Content */
