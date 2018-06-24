@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head w3-include-html="head.html">
+		<link rel="stylesheet" href="Content/main.css">
+	</head>
+	<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML += this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>	
+	<body>
+	<div class="container"> 
+		<div w3-include-html="header.html" class="header" ></div> 
+
+		<script>
+		includeHTML();
+		</script>
+		<div w3-include-html="menu.html" class="menu" ></div> 
+		<div class="content">
+			<div><h5>01. Mai 2018</h5>
+			<h3>Saber - 1/8 - Motored Cuirassier</h3>
+			<p>I realy like Saber in her suit and the motorcicle is awesome, too.</p>
+			<img src="Content/Images/Fate/Saber1.jpg" alt="Saber" width=80% >
+			<table class="Figurina">
+				<tbody>
+					<tr>
+					<td>Category:</td><td>Prepainted Scale (1/8)</td></tr>
+					<tr>
+					<td>Origin:</td><td>Fate/Zero</td></tr>
+					<tr>
+					<td>Character:</td><td>Saber</td></tr>
+					<tr>
+					<td>Company:</td><td>Good Smile Company</td></tr>
+					<tr>
+					<td>Dimensions:</td><td>H=29cm</td></tr>
+					<tr>
+					<td>Release Date:</td><td>2017/05/22</td></tr>
+					<tr>
+					<td>Price:</td><td> &#165;14.630 (~$133)</td></tr>
+					<tr>
+					<td>Rating:</td>
+									<td><span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> 
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+									</td></tr>
+				</tbody>
+				</tr>
+			</table>
+				<br>
+				<img src="Content/Images/Fate/Saber2.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber3.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber4.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber5.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber6.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber7.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber8.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber9.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber10.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber11.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber12.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber13.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber14.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber15.jpg" alt="Saber" width=60% >
+				<img src="Content/Images/Fate/Saber16.jpg" alt="Saber" width=60% >
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

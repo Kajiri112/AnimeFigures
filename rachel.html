@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head w3-include-html="head.html">
+		<link rel="stylesheet" href="Content/main.css">
+	</head>
+	<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML += this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>	
+	<body>
+	<div class="container"> 
+		<div w3-include-html="header.html" class="header" ></div> 
+
+		<script>
+		includeHTML();
+		</script>
+		<div w3-include-html="menu.html" class="menu" ></div> 
+		<div class="content">
+			<div><h5>June 24, 2018</h5>
+			<h3>Rachel Emerson - 1/8</h3>
+			<p>I do not know the series but New Vision Toys hat brought out a wonderful diorama.
+            This makes her a wonderful collector's item for my showcase. 
+            I think she looks like Aiz Wallenstein from <i>Danmachi</i> but this is Rachel from the light novel <i>Hourou Yuusha wa Kinka to Odoru</i></p>
+			<img src="Content/Images/hourou/rachel12.jpg" alt="Rachel" width=80% >
+			<table class="Figurina">
+				<tbody>
+					<tr>
+					<td>Category:</td><td>Prepainted Scale (1/8)</td></tr>
+					<tr>
+					<td>Origin:</td><td>Hourou Yuusha wa Kinka to Odoru</td></tr>
+					<tr>
+					<td>Character:</td><td>Rachel Emerson</td></tr>
+					<tr>
+					<td>Company:</td><td>New Vision Toys</td></tr>
+					<tr>
+					<td>Dimensions:</td><td>H=21cm</td></tr>
+					<tr>
+					<td>Release Date:</td><td>2017/02/28</td></tr>
+					<tr>
+					<td>Price:</td><td> &#165;11,800 (~$107)</td></tr>
+					<tr>
+					<td>Rating:</td>
+									<td><span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> 
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+									</td></tr>
+				</tbody>
+				</tr>
+			</table>
+				<br>
+				<img src="Content/Images/hourou/rachel1.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel3.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel5.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel6.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel7.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rache8.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel9.jpg" alt="Rachel" width=60% >
+				<img src="Content/Images/hourou/rachel14.jpg" alt="Rachel" width=60% >
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
