@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head w3-include-html="head.html">
-		<link rel="stylesheet" href="Content/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../Content/manga.css">
 	</head>
-		<script>
+	<script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -31,21 +32,26 @@ function includeHTML() {
     }
   }
 };
-</script>	
-	<body>
+</script>
+<body>
 	<div class="container"> 
-		<div w3-include-html="header.html" class="header" ></div>
+		<div w3-include-html="headernav.html" class="header" ></div> 
+
 		<script>
 		includeHTML();
-		</script>
+		</script> 
 		<div class="content">
-		<p><img src="Content/Images/Logo/avatar.jpg" alt="Tharja" width=20% >
-		<p><b>Owner</b>
-		<br>Lisa Franzkowiak
-		<br>Lindenplatz 14
-		<br>52064 Aachen
-		<br>kajiri(at)hotmail.de</p>
-    </div>
+			<div class="content-container">
+                <div class="left-side">
+                    <img src="img/Anoise.jpg">
+                </div>
+                <div class="right-side">
+                    <h3>Anonymous Noise</h3>
+                    <p>Blabla super Manga über Musik und so</p>
+                </div>
+			</div>
+		</div>
+			<br>
 	</div>
 	</body>
 </html>

@@ -1,0 +1,417 @@
+html, body, .container {
+	height:100%;
+}
+
+.container { 
+  width:80%;
+  margin: auto;
+  text-align: center;
+  display: grid; 
+  grid-template-rows:200px 5% 1fr 50px; 
+  grid-template-columns:5% 14% 1% 60% 20%; 
+  grid-auto-flow: column;
+  height:100%;
+  padding-bottom: auto;
+}
+
+.content-container { 
+  margin: auto;
+  text-align: center;
+  display: grid; 
+  grid-template-rows:1fr; 
+  grid-template-columns:30% 70%; 
+  grid-auto-flow: column;
+  height:100%;
+}
+
+.left-side {
+  background-color: #001033;
+  grid-column: 1;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.left-side img {
+  padding-top: 10px;
+  border: 0 !important;
+}
+
+.right-side {
+  grid-column: 2;
+  background-color: #cdcdcd;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.right-side p {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+/* Header */
+.header {
+  height: 200px;	
+	grid-column: 1 / 6;
+  grid-row:1;
+	background-image: url("Images/Logo/header1.jpg");
+  background-position: center;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.headertable {
+	height: 200px;
+	width: 100%;
+	table-layout: fixed;
+  	border-spacing:0; 
+    border-collapse: collapse;   
+}
+
+.imagerow {
+	height: 165px;
+}
+
+.imagetd {
+	vertical-align: bottom;	
+	padding-left: 5px;
+}
+
+.navrow {
+	height: 35px;	
+	margin:0;
+    padding:0;
+	display: block;
+	border: 0;
+	grid-column: 1 / 5;
+}
+
+.navtd {	
+	margin:0;
+    padding:0;
+	display: block;
+	border: 0;
+}
+
+table, tbody, td {
+padding: 0px;
+width: 100%;
+text-align: left;
+}
+
+/* Instagram FB etc */
+
+.instaicon {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin-left: 8px;
+	padding: 5px;
+}
+
+.instaiconkrb {
+	width: 25px;
+	height: 25px;
+}
+
+.instaicon:hover {
+	background:#e8ebf5;
+	
+}
+
+
+/* Nav Test */
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgba(205,205,205, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #001033;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #49494c;
+    color: white;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 4px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 4px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+
+}
+
+/* Content */
+.content {
+  width: 100%;
+  background-color: #cdcdcd;
+  color: #001033;
+  grid-column: 1 / 6;
+  grid-row: 3;
+  border-radius: 10px 10px; 
+}
+
+.content a {
+  text-decoration: none !important;
+}
+
+.aside {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row:3;
+}
+
+.article {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row:3;
+}
+
+.article > p {
+    grid-column-start: 4;
+    grid-column-end: 4; 
+    grid-row:3;
+}
+p {
+    text-align: center;
+}
+
+ul {
+	text-align: center;
+}
+
+body {
+	font-family: "Arial", Arial, sans-serif;
+	background-color: #49494c;
+	color: #001033;
+	font-size: 17px;
+}
+
+h3 {
+	font-size: 35px;
+}
+
+h5 {
+	text-align: left;
+}
+
+.content > div > img, .content > div > div > img, .content > div > a > img {
+	margin-bottom: 20px;
+	border: 5px solid #001033;
+}
+
+.reeldiv {
+    text-align: center;
+    width: 60%;
+    border: 5px solid #001033;
+    display: inline-block;
+}
+
+/* Table */
+table.Figurina {
+  border: 3px solid #001033;
+  background-color: #CDCDCD;
+  width: 80%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+table.Figurina td, table.Figurina th {
+  padding: 5px;
+  width: auto;
+}
+table.Figurina tbody td {
+  font-size: 15px;
+  font-weight: bold;
+  color: #001033;
+}
+table.Figurina tr:nth-child(even) {
+  background: #CDD3E9;
+}
+
+/* Sterne für Bewertung */
+.checked {
+    color: orange;
+} 
+
+/* Content Items */
+
+.item-container {
+  display: grid; 
+  grid-template-rows: 250px; 
+  grid-template-columns: repeat(auto-fill, 250px); 
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.item-container > div > a {
+	height: 100%;
+	width: 100%;
+}
+
+.item-container > div > a > img {
+	height: 100%;
+	width: 100%;
+}
+
+/* Kalender */
+
+.panel {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.accordion {
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 80%;
+}
+
+.active, .accordion:hover {
+
+  width: 75%;
+}
+
+.verlag {
+  color: #001033;
+  font-size: 20px;
+}
+
+.kalender h2 {
+  text-align: left;
+  padding-left: 10%;
+}
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  width: 90%;
+  padding-left: 20%;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 20px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 17px;
+  transition: 0.2s;
+  width: 80%;
+  text-align: left;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(even) {
+  background: #ccc;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Kalender Ende*/
+
+/* Footer nicht im Einsatz  später für Login*/
+.footer {
+	height: 100%;	
+	grid-column: 1 / 6;
+	grid-row: 4;
+	text-align:center;
+	background-color: #abb5d9;
+	margin-top: 10px;
+	padding: 2.5px;
+}

@@ -19,7 +19,8 @@ html, body, .container {
 	grid-column: 1 / 6;
 	grid-row:1;
 	background-image: url("Images/Logo/header.jpg");
-	background-position: center;
+    background-position: center;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .headertable {
@@ -27,7 +28,7 @@ html, body, .container {
 	width: 100%;
 	table-layout: fixed;
   	border-spacing:0; 
-  	border-collapse: collapse; 
+    border-collapse: collapse;   
 }
 
 .imagerow {
@@ -69,14 +70,16 @@ text-align: left;
 	padding:0;
 	width: 100%;
 	height: 35px;
-	margin: 0;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
  
 ul#navigation {
 	display: inline-block;
 	margin: 0px;
 	padding:0;		
-	width: 100%;
+    width: 100%;
 }
  
 ul#navigation li {
@@ -96,6 +99,7 @@ ul#navigation li a {
     text-decoration:none;
     display:inline-block;
     background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
 }
  
 ul#navigation li a:hover {
@@ -112,7 +116,7 @@ ul#navigation li a.last {
 }
  
 ul#navigation li:hover > a {
-    background#dfe4f3;
+    background: #dfe4f3;
 }
 
 ul#navigation li:hover > ul {
@@ -135,6 +139,7 @@ ul#navigation ul, ul#navigation ul li ul {
     -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
     -o-transition:opacity 0.2s linear, visibility 0.2s linear;
     transition:opacity 0.2s linear, visibility 0.2s linear;
+    border-radius: 10px 10px 10px 10px;
 }
 
 ul#navigation ul {
@@ -189,12 +194,17 @@ ul#navigation ul li a {
 	grid-column: 2;
 	grid-row: 3;
 	color: #cdd3e9;
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .post {
-	margin-bottom: 5px;
-	border: 2px solid #555557;
+	margin-bottom: 2.5px;
+    border: 2px solid #555557;
+    border-radius: 10%;
+}
+
+.post:hover {
+    background-color: #555557;
 }
 
 .postlink {
@@ -214,6 +224,7 @@ ul#navigation ul li a {
   grid-column: 4;
   grid-row:3;
   padding: 20px;
+  border-radius: 10px 10px;
 }
 
 p {
@@ -239,9 +250,16 @@ h5 {
 	text-align: left;
 }
 
-.content > div > img, .content > div > a > img {
+.content > div > img, .content > div > div > img, .content > div > a > img {
 	margin-bottom: 20px;
 	border: 5px solid #001033;
+}
+
+.reeldiv {
+    text-align: center;
+    width: 60%;
+    border: 5px solid #001033;
+    display: inline-block;
 }
 
 /* Table */

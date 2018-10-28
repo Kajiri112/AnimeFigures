@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<head w3-include-html="head.html">
-		<link rel="stylesheet" href="Content/main.css">
+	<head w3-include-html="headernav.html">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../Content/manga.css">
 	</head>
-		<script>
+	<script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -34,18 +35,19 @@ function includeHTML() {
 </script>	
 	<body>
 	<div class="container"> 
-		<div w3-include-html="header.html" class="header" ></div>
+		<div w3-include-html="headernav.html" class="header" ></div> 
+
 		<script>
 		includeHTML();
-		</script>
+		</script> 
 		<div class="content">
-		<p><img src="Content/Images/Logo/avatar.jpg" alt="Tharja" width=20% >
-		<p><b>Owner</b>
-		<br>Lisa Franzkowiak
-		<br>Lindenplatz 14
-		<br>52064 Aachen
-		<br>kajiri(at)hotmail.de</p>
-    </div>
+			<div class="article">
+					<h3>Kajiris Regal</h3>
+					<p>Hallo! Das ist meine ganz persönliche Manga-Datenbank mit meiner kompletten Sammlung.</p> 
+						<a href="mangadatenbank.html" ><img src="img/img1.jpg" alt="Manga" width=50% ></a> 
+					</div>
+		</div>
+			<br>
 	</div>
 	</body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head w3-include-html="head.html">
+    <link rel="stylesheet" href="Content/main.css">
+</head>
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML += this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+<script src="Content/jquery-3.3.1.min.js"></script>
+<script src="Content/jquery.reel.js"></script>
+
+<body>
+    <div class="container">
+        <div w3-include-html="header.html" class="header"></div>
+
+        <script>
+            includeHTML();
+        </script>
+        <div w3-include-html="menu.html" class="menu"></div>
+        <div class="content">
+            <div>
+                <h5>August 09, 2018</h5>
+                <h3>Kanna - 1/6</h3>
+                <img src="Content/Images/Maiddragon/kanna1.jpg" alt="Kanna" width=60%>
+                <table class="Figurina">
+                    <tbody>
+                        <tr>
+                            <td>Category:</td>
+                            <td>Prepainted Scale (1/7)</td>
+                        </tr>
+                        <tr>
+                            <td>Origin:</td>
+                            <td>Kobayashi-san chi no Maid Dragon</td>
+                        </tr>
+                        <tr>
+                            <td>Character:</td>
+                            <td>Kanna</td>
+                        </tr>
+                        <tr>
+                            <td>Company:</td>
+                            <td>Pulchra</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions:</td>
+                            <td>H=19cm</td>
+                        </tr>
+                        <tr>
+                            <td>Release Date:</td>
+                            <td>2018/05/28</td>
+                        </tr>
+                        <tr>
+                            <td>Price:</td>
+                            <td> &#165;10,000 (~$90)</td>
+                        </tr>
+                        <tr>
+                            <td>Rating:</td>
+                            <td>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                </table>
+                <br>
+                <div class="reeldiv">
+                    <img src="Content/Images/Maiddragon/kanna1.jpg" class="reel" data-speed="0.5" data-clickfree="false" data-images="Content/Images/Maiddragon/kanna#.JPG|1..23"
+                        data-responsive="true" data-backwards="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

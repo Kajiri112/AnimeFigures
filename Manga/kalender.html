@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head w3-include-html="headernav.html">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../Content/manga.css">
+	</head>
+	<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML += this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>	
+	<body>
+	<div class="container"> 
+		<div w3-include-html="headernav.html" class="header" ></div> 
+
+		<script>
+		includeHTML();
+		</script> 
+		<div class="content">
+			<div class="kalender">
+                    <h3>Kalender</h3>
+                    <h2>November 2018</h2>
+                    <button class="accordion verlag">Egmont/Kaze</button>
+                    <div class="panel">
+					                <ul>
+                            <li>Atelier of Witch Hat limited 02</li>
+                            <li>CCS Clear Card Arc 03</li>
+                            <li>Horimiya 11</li>
+                            <li>Perfect World 04</li>
+                            <li>Tanya the Evil 04</li>
+                            <li>True Kiss 01</li>
+                            <li>Danmachi 08</li>
+                            <li>Die Tanuki-Prinzessin 07</li>
+                            <li>Magi 36</li>
+                            <li>This lonely Planet 07</li>
+                          </ul>
+                    </div>
+                    <button class="accordion verlag">Tokyopop</button>
+                    <div class="panel">
+					                <ul>
+                            <li>Atemlose Liebe 03</li>
+                            <li>Citrus 09</li>
+                            <li>Fate/Stay Night 03</li>
+                            <li>Kuss um Mitternacht 05</li>
+                          </ul>
+                        </div>
+                        <button class="accordion verlag">altraverse</button>
+                        <div class="panel">
+                              <ul id="myUL">
+                            <li>After the Rain 02</li>
+                            <li>Begegnungen mit Toki</li>
+                            <li>Das Herz einer Hexe 01</li>
+                            <li>Goblin Slayer 03</li>
+                            <li>Kakegurui 04</li>
+                            <li>NieR Artbook</li>
+                          </ul>
+                        </div>
+                        <button class="accordion verlag">Carlsen</button>
+                        <div class="panel">
+                              <ul id="myUL">
+                            <li>Anonymous Noise 08</li>
+                            <li>Arslan Senki 08</li>
+                            <li>Attack on Titan 24</li>
+                            <li>Children of the Whales 05</li>
+                            <li>Food Wars 17</li>
+                            <li>The Promised Neverland 05</li>
+                          </ul>
+                        </div>
+                        <h2>Dezember 2018</h2>
+                        <button class="accordion verlag">Egmont/Kaze</button>
+                        <div class="panel">
+                              <ul id="myUL">
+                                <li>Say "I love You" 09</li>
+                                <li>Haikyu!! 09</li>
+                                <li>Konditorin Kosaki 02</li>
+                                <li>Love & Lies 02</li>
+                                <li>One Punch Man 15 + Box</li>
+                              </ul>
+                        </div>
+                        <button class="accordion verlag">Tokyopop</button>
+                    <div class="panel">
+					                <ul id="myUL">
+                            <li>In/Spectre 05</li>
+                            <li>Lovely Notes 02</li>
+                            <li>Miracles of Love 08</li>
+                            <li>Platinum End 08</li>
+                            <li>SAO Phantom Bullet 01</li>
+                          </ul>
+                        </div>
+                        <button class="accordion verlag">altraverse</button>
+                        <div class="panel">
+                              <ul id="myUL">
+                            <li>Daily Butterfly 03</li>
+                            <li>Demi-chan 05</li>
+                            <li>&eacute;clair</li>
+                            <li>Gamers! 02</li>
+                            <li>Kein Dad wie jeder andere 04</li>
+                            <li>Keine Cheats für die Liebe 05</li>
+                            <li>Made in Abyss 04</li>   
+                            <li>Slime 03</li>
+                          </ul>
+                        </div>
+                        <button class="accordion verlag">Carlsen</button>
+                        <div class="panel">
+                              <ul>
+                            <li>Manga Love Story 70</li>
+                            <li>Takane to Hana 05</li>
+                          </ul>
+                        </div>
+                        <h2>Januar 2019</h2>
+
+                    <script>
+                       // Accordion 
+                        var acc = document.getElementsByClassName("accordion");
+                        var i;
+                        
+                        for (i = 0; i < acc.length; i++) {
+                          acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.maxHeight){
+                              panel.style.maxHeight = null;
+                            } else {
+                              panel.style.maxHeight = panel.scrollHeight + "px";
+                            } 
+                          });
+                        }
+                        </script>
+
+                          <script>
+                          // Add a "checked" symbol when clicking on a list item
+                          var lists = document.querySelectorAll('ul');
+                          for(var index = 0; index < lists.length; index = index + 1)
+                          {
+                            var list = lists[index];
+                            list.addEventListener('click', function(ev) {
+                            if (ev.target.tagName === 'LI') {
+                              ev.target.classList.toggle('checked');
+                            }
+                          }, false);
+                          }
+                          
+                          </script>
+					</div>
+		</div>
+			<br>
+	</div>
+	</body>
+</html>
